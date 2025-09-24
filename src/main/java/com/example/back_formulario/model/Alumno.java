@@ -1,5 +1,10 @@
 package com.example.back_formulario.model;
 
-public class Alumno extends Persona{
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class Alumno extends Persona {
     private String grado;
 }
