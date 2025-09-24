@@ -27,4 +27,19 @@ public class PersonaServiceImpl implements PersonaService {
     public Persona buscarPorId(Long id) {
         return personas.get(id);
     }
+
+    @Override
+    public Persona actualizar(Long id, Persona persona) {
+        if (personas.containsKey(id)) {
+            persona.setId(id); // conservar el mismo id
+            personas.put(id, persona);
+            return persona;
+        }
+        return null; // o lanzar excepción
+    }
+
+    @Override
+    public void eliminar(Long id) {
+        personas.remove(id);
+    }
 }

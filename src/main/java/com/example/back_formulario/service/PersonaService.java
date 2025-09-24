@@ -7,4 +7,6 @@ public interface PersonaService {
     Persona crear(Persona persona);
     List<Persona> listar();
     Persona buscarPorId(Long id);
+    Persona actualizar(Long id, Persona persona);
+    void eliminar(Long id);
 }
